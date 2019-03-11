@@ -6,16 +6,16 @@ define(_CLIENT_VERSION_REVISION, 0)
 define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2018)
-AC_INIT([BS Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[www.bitstake.com],[BS])
+AC_INIT([SKW Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[www.bitstake.com],[SKW])
 AC_CONFIG_SRCDIR([src/main.cpp])
-AC_CONFIG_HEADERS([src/config/BS-config.h])
+AC_CONFIG_HEADERS([src/config/SKW-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=BSd
-BITCOIN_GUI_NAME=BS-qt
-BITCOIN_CLI_NAME=BS-cli
-BITCOIN_TX_NAME=BS-tx
+BITCOIN_DAEMON_NAME=SKWd
+BITCOIN_GUI_NAME=SKW-qt
+BITCOIN_CLI_NAME=SKW-cli
+BITCOIN_TX_NAME=SKW-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])
@@ -25,9 +25,9 @@ fi
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef BS_CONFIG_H])
-AH_TOP([#define BS_CONFIG_H])
-AH_BOTTOM([#endif //BS_CONFIG_H])
+AH_TOP([#ifndef SKW_CONFIG_H])
+AH_TOP([#define SKW_CONFIG_H])
+AH_BOTTOM([#endif //SKW_CONFIG_H])
 
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME
@@ -243,7 +243,7 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build BS-cli BS-tx (default=yes)])],
+  [build SKW-cli SKW-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
@@ -255,7 +255,7 @@ AC_ARG_WITH([libs],
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build BSd daemon (default=yes)])],
+  [build SKWd daemon (default=yes)])],
   [build_bitcoind=$withval],
   [build_bitcoind=yes])
 
@@ -311,7 +311,7 @@ case $host in
        x86_64-*) WINDOWS_BITS=64 ;;
        *) AC_MSG_ERROR("Could not determine win32/win64 for installer") ;;
      esac
-     AC_SUBST(WINDOWS_BITS)
+     AC_SUSKWT(WINDOWS_BITS)
 
      dnl libtool insists upon adding -nostdlib and a list of objects/libs to link against.
      dnl That breaks our ability to build dll's with static libgcc/libstdc++/libssp. Override
@@ -407,16 +407,16 @@ if test x$use_pkgconfig = xyes; then
 fi
 
 if test x$use_comparison_tool != xno; then
-  AC_SUBST(JAVA_COMPARISON_TOOL, $use_comparison_tool)
+  AC_SUSKWT(JAVA_COMPARISON_TOOL, $use_comparison_tool)
 fi
 
 if test x$use_comparison_tool_reorg_tests != xno; then
   if test x$use_comparison_tool = x; then
     AC_MSG_ERROR("comparison tool reorg tests but comparison tool was not specified")
   fi
-  AC_SUBST(COMPARISON_TOOL_REORG_TESTS, 1)
+  AC_SUSKWT(COMPARISON_TOOL_REORG_TESTS, 1)
 else
-  AC_SUBST(COMPARISON_TOOL_REORG_TESTS, 0)
+  AC_SUSKWT(COMPARISON_TOOL_REORG_TESTS, 0)
 fi
 
 if test x$use_lcov = xyes; then
@@ -447,7 +447,7 @@ AC_C_BIGENDIAN([AC_MSG_ERROR("Big Endian not supported")])
 dnl Check for pthread compile/link requirements
 AX_PTHREAD
 
-# The following macro will add the necessary defines to BS-config.h, but
+# The following macro will add the necessary defines to SKW-config.h, but
 # they also need to be passed down to any subprojects. Pull the results out of
 # the cache and add them to CPPFLAGS.
 AC_SYS_LARGEFILE
@@ -629,9 +629,9 @@ LEVELDB_CPPFLAGS=
 LIBLEVELDB=
 LIBMEMENV=
 AM_CONDITIONAL([EMBEDDED_LEVELDB],[true])
-AC_SUBST(LEVELDB_CPPFLAGS)
-AC_SUBST(LIBLEVELDB)
-AC_SUBST(LIBMEMENV)
+AC_SUSKWT(LEVELDB_CPPFLAGS)
+AC_SUSKWT(LIBLEVELDB)
+AC_SUSKWT(LIBMEMENV)
 
 if test x$enable_wallet != xno; then
     dnl Check for libdb_cxx only if wallet enabled
@@ -944,8 +944,8 @@ if test x$system_univalue = xno ; then
   UNIVALUE_LIBS='univalue/libunivalue.la'
 fi
 AM_CONDITIONAL([EMBEDDED_UNIVALUE],[test x$system_univalue = xno])
-AC_SUBST(UNIVALUE_CFLAGS)
-AC_SUBST(UNIVALUE_LIBS)
+AC_SUSKWT(UNIVALUE_CFLAGS)
+AC_SUSKWT(UNIVALUE_LIBS)
 
 CFLAGS_TEMP="$CFLAGS"
 LIBS_TEMP="$LIBS"
@@ -957,11 +957,11 @@ LIBS="$LIBS_TEMP"
 
 BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 
-AC_MSG_CHECKING([whether to build BSd])
+AC_MSG_CHECKING([whether to build SKWd])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
-AC_MSG_CHECKING([whether to build utils (BS-cli BS-tx)])
+AC_MSG_CHECKING([whether to build utils (SKW-cli SKW-tx)])
 AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
 AC_MSG_RESULT($build_bitcoin_utils)
 
@@ -1061,7 +1061,7 @@ if test x$bitcoin_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_BS-qt])
+  AC_MSG_CHECKING([whether to build test_SKW-qt])
   if test x$use_tests$bitcoin_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="test"
@@ -1072,7 +1072,7 @@ fi
 
 AM_CONDITIONAL([ENABLE_ZMQ], [test "x$use_zmq" = "xyes"])
 
-AC_MSG_CHECKING([whether to build test_BS])
+AC_MSG_CHECKING([whether to build test_SKW])
 if test x$use_tests = xyes; then
   AC_MSG_RESULT([yes])
   BUILD_TEST="test"
@@ -1111,42 +1111,42 @@ AC_DEFINE(CLIENT_VERSION_REVISION, _CLIENT_VERSION_REVISION, [Build revision])
 AC_DEFINE(CLIENT_VERSION_BUILD, _CLIENT_VERSION_BUILD, [Version Build])
 AC_DEFINE(CLIENT_VERSION_IS_RELEASE, _CLIENT_VERSION_IS_RELEASE, [Version is release])
 AC_DEFINE(COPYRIGHT_YEAR, _COPYRIGHT_YEAR, [Version is release])
-AC_SUBST(CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MAJOR)
-AC_SUBST(CLIENT_VERSION_MINOR, _CLIENT_VERSION_MINOR)
-AC_SUBST(CLIENT_VERSION_REVISION, _CLIENT_VERSION_REVISION)
-AC_SUBST(CLIENT_VERSION_BUILD, _CLIENT_VERSION_BUILD)
-AC_SUBST(CLIENT_VERSION_IS_RELEASE, _CLIENT_VERSION_IS_RELEASE)
-AC_SUBST(COPYRIGHT_YEAR, _COPYRIGHT_YEAR)
-AC_SUBST(BITCOIN_DAEMON_NAME)
-AC_SUBST(BITCOIN_GUI_NAME)
-AC_SUBST(BITCOIN_CLI_NAME)
-AC_SUBST(BITCOIN_TX_NAME)
+AC_SUSKWT(CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MAJOR)
+AC_SUSKWT(CLIENT_VERSION_MINOR, _CLIENT_VERSION_MINOR)
+AC_SUSKWT(CLIENT_VERSION_REVISION, _CLIENT_VERSION_REVISION)
+AC_SUSKWT(CLIENT_VERSION_BUILD, _CLIENT_VERSION_BUILD)
+AC_SUSKWT(CLIENT_VERSION_IS_RELEASE, _CLIENT_VERSION_IS_RELEASE)
+AC_SUSKWT(COPYRIGHT_YEAR, _COPYRIGHT_YEAR)
+AC_SUSKWT(BITCOIN_DAEMON_NAME)
+AC_SUSKWT(BITCOIN_GUI_NAME)
+AC_SUSKWT(BITCOIN_CLI_NAME)
+AC_SUSKWT(BITCOIN_TX_NAME)
 
-AC_SUBST(RELDFLAGS)
-AC_SUBST(ERROR_CXXFLAGS)
-AC_SUBST(HARDENED_CXXFLAGS)
-AC_SUBST(HARDENED_CPPFLAGS)
-AC_SUBST(HARDENED_LDFLAGS)
-AC_SUBST(PIC_FLAGS)
-AC_SUBST(PIE_FLAGS)
-AC_SUBST(LIBTOOL_APP_LDFLAGS)
-AC_SUBST(USE_UPNP)
-AC_SUBST(USE_QRCODE)
-AC_SUBST(BOOST_LIBS)
-AC_SUBST(TESTDEFS)
-AC_SUBST(LEVELDB_TARGET_FLAGS)
-AC_SUBST(BUILD_TEST)
-AC_SUBST(BUILD_QT)
-AC_SUBST(BUILD_TEST_QT)
-AC_SUBST(MINIUPNPC_CPPFLAGS)
-AC_SUBST(MINIUPNPC_LIBS)
-AC_SUBST(CRYPTO_LIBS)
-AC_SUBST(SSL_LIBS)
-AC_SUBST(EVENT_LIBS)
-AC_SUBST(EVENT_PTHREADS_LIBS)
-AC_SUBST(ZMQ_LIBS)
-AC_SUBST(PROTOBUF_LIBS)
-AC_SUBST(QR_LIBS)
+AC_SUSKWT(RELDFLAGS)
+AC_SUSKWT(ERROR_CXXFLAGS)
+AC_SUSKWT(HARDENED_CXXFLAGS)
+AC_SUSKWT(HARDENED_CPPFLAGS)
+AC_SUSKWT(HARDENED_LDFLAGS)
+AC_SUSKWT(PIC_FLAGS)
+AC_SUSKWT(PIE_FLAGS)
+AC_SUSKWT(LIBTOOL_APP_LDFLAGS)
+AC_SUSKWT(USE_UPNP)
+AC_SUSKWT(USE_QRCODE)
+AC_SUSKWT(BOOST_LIBS)
+AC_SUSKWT(TESTDEFS)
+AC_SUSKWT(LEVELDB_TARGET_FLAGS)
+AC_SUSKWT(BUILD_TEST)
+AC_SUSKWT(BUILD_QT)
+AC_SUSKWT(BUILD_TEST_QT)
+AC_SUSKWT(MINIUPNPC_CPPFLAGS)
+AC_SUSKWT(MINIUPNPC_LIBS)
+AC_SUSKWT(CRYPTO_LIBS)
+AC_SUSKWT(SSL_LIBS)
+AC_SUSKWT(EVENT_LIBS)
+AC_SUSKWT(EVENT_PTHREADS_LIBS)
+AC_SUSKWT(ZMQ_LIBS)
+AC_SUSKWT(PROTOBUF_LIBS)
+AC_SUSKWT(QR_LIBS)
 AC_CONFIG_FILES([Makefile src/Makefile doc/man/Makefile share/setup.nsi share/qt/Info.plist src/test/buildenv.py])
 AC_CONFIG_FILES([qa/pull-tester/run-bitcoind-for-test.sh],[chmod +x qa/pull-tester/run-bitcoind-for-test.sh])
 AC_CONFIG_FILES([qa/pull-tester/tests-config.sh],[chmod +x qa/pull-tester/tests-config.sh])
