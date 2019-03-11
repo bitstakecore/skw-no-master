@@ -1,7 +1,7 @@
-IDI_ICON1 ICON DISCARDABLE "icons/BS.ico"
-IDI_ICON2 ICON DISCARDABLE "icons/BS_testnet.ico"
-IDI_ICON2 ICON DISCARDABLE "icons/BS_regtest.ico"
-IDI_ICON2 ICON DISCARDABLE "icons/BS_unittest.ico"
+IDI_ICON1 ICON DISCARDABLE "icons/SKW.ico"
+IDI_ICON2 ICON DISCARDABLE "icons/SKW_testnet.ico"
+IDI_ICON2 ICON DISCARDABLE "icons/SKW_regtest.ico"
+IDI_ICON2 ICON DISCARDABLE "icons/SKW_unittest.ico"
 
 #include <windows.h>             // needed for VERSIONINFO
 #include "../../clientversion.h" // holds the needed client version information
@@ -21,14 +21,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "BS-coin"
-            VALUE "FileDescription",    "BS Core (OSS GUI client for BS)"
+            VALUE "CompanyName",        "SKW-coin"
+            VALUE "FileDescription",    "SKW Core (OSS GUI client for SKW)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "BS-qt"
+            VALUE "InternalName",       "SKW-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "BS-qt.exe"
-            VALUE "ProductName",        "BS Core"
+            VALUE "OriginalFilename",   "SKW-qt.exe"
+            VALUE "ProductName",        "SKW Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

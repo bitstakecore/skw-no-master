@@ -1,6 +1,6 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/icons">
-        <file alias="BS">res/icons/BS.png</file>
+        <file alias="SKW">res/icons/SKW.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
         <file alias="send">res/icons/send.png</file>
@@ -28,9 +28,9 @@
         <file alias="editpaste">res/icons/editpaste.png</file>
         <file alias="editcopy">res/icons/editcopy.png</file>
         <file alias="add">res/icons/add.png</file>
-        <file alias="BS_testnet">res/icons/BS_testnet.png</file>
-        <file alias="BS_regtest">res/icons/BS_regtest.png</file>
-        <file alias="BS_unittest">res/icons/BS_unittest.png</file>
+        <file alias="SKW_testnet">res/icons/SKW_testnet.png</file>
+        <file alias="SKW_regtest">res/icons/SKW_regtest.png</file>
+        <file alias="SKW_unittest">res/icons/SKW_unittest.png</file>
         <file alias="edit">res/icons/edit.png</file>
         <file alias="history">res/icons/history.png</file>
         <file alias="overview">res/icons/overview.png</file>
@@ -42,7 +42,7 @@
         <file alias="tx_input">res/icons/tx_input.png</file>
         <file alias="tx_output">res/icons/tx_output.png</file>
         <file alias="tx_inout">res/icons/tx_inout.png</file>
-        <file alias="unit_BS">res/icons/unit_BS.png</file>
+        <file alias="unit_SKW">res/icons/unit_SKW.png</file>
         <file alias="unit_mion">res/icons/unit_mion.png</file>
         <file alias="unit_uion">res/icons/unit_uion.png</file>
         <file alias="unit_tion">res/icons/unit_tion.png</file>
@@ -65,7 +65,7 @@
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
-        <file alias="BS_logo_horizontal">res/images/BS_logo_horizontal.png</file>
+        <file alias="SKW_logo_horizontal">res/images/SKW_logo_horizontal.png</file>
         <file alias="downArrow">res/images/downArrow_dark.png</file>
         <file alias="downArrow_small">res/images/downArrow_small_dark.png</file>
         <file alias="downArrow_small_white">res/images/downArrow_small.png</file>
