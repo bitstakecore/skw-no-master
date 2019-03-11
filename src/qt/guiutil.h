@@ -111,7 +111,7 @@ bool isObscured(QWidget* w);
 // Open debug.log
 void openDebugLogfile();
 
-// Open Bitstakecoin.conf
+// Open Stakework.conf
 void openConfigfile();
 
 // Open masternode.conf

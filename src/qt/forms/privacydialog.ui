@@ -1594,8 +1594,8 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
                            <string>Show the current status of automatic xBS minting.
 
 To change the status (restart required):
-- enable: add 'enablezeromint=1' to Bitstakecoin.conf
-- disable: add 'enablezeromint=0' to Bitstakecoin.conf
+- enable: add 'enablezeromint=1' to Stakework.conf
+- disable: add 'enablezeromint=0' to Stakework.conf
 
 To change the percentage (no restart required):
 - menu Settings-&gt;Options-&gt;Percentage of autominted xBS

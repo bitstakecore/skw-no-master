@@ -373,7 +373,7 @@ void openConfigfile()
 {
     boost::filesystem::path pathConfig = GetConfigFile();
 
-    /* Open Bitstakecoin.conf with the associated application */
+    /* Open Stakework.conf with the associated application */
     if (boost::filesystem::exists(pathConfig))
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 }
