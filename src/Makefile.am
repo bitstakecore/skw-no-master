@@ -1,6 +1,6 @@
 # Copyright (c) 2013-2016 The Bitcoin Core developers
 # Copyright (c) 2015-2018 The PIVX developers
-# Copyright (c) 2018 The BS developers
+# Copyright (c) 2018 The StakeWork developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -80,15 +80,15 @@ noinst_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += BSd
+  bin_PROGRAMS += SKWd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += BS-cli BS-tx
+  bin_PROGRAMS += SKW-cli SKW-tx
 endif
 
 .PHONY: FORCE
-# BS Core #
+# SKW Core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -193,7 +193,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between BSd and BS-qt
+# server: shared between SKWd and SKW-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -239,7 +239,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between BSd and BS-qt, but only linked
+# wallet: shared between SKWd and SKW-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -302,7 +302,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sph_types.h
 
 
-# common: shared between BSd, and BS-qt and non-server tools
+# common: shared between SKWd, and SKW-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -361,7 +361,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between BS-cli and BS-qt
+# cli: shared between SKW-cli and SKW-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -371,16 +371,16 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# BSd binary #
-BSd_SOURCES = BSd.cpp
-BSd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-BSd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-BSd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# SKWd binary #
+SKWd_SOURCES = SKWd.cpp
+SKWd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+SKWd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+SKWd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-BSd_SOURCES += BSd-res.rc
+SKWd_SOURCES += SKWd-res.rc
 endif
-BSd_LDADD = \
+SKWd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -392,45 +392,45 @@ BSd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-BSd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+SKWd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# BS-cli binary #
-BS_cli_SOURCES = BS-cli.cpp
-BS_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-BS_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-BS_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# SKW-cli binary #
+SKW_cli_SOURCES = SKW-cli.cpp
+SKW_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+SKW_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+SKW_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-BS_cli_SOURCES += BS-cli-res.rc
+SKW_cli_SOURCES += SKW-cli-res.rc
 endif
 
-BS_cli_LDADD = \
+SKW_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-BS_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+SKW_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# BS-tx binary #
-BS_tx_SOURCES = BS-tx.cpp
-BS_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-BS_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-BS_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# SKW-tx binary #
+SKW_tx_SOURCES = SKW-tx.cpp
+SKW_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+SKW_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+SKW_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-BS_tx_SOURCES += BS-tx-res.rc
+SKW_tx_SOURCES += SKW-tx-res.rc
 endif
 
-BS_tx_LDADD = \
+SKW_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-BS_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+SKW_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #
