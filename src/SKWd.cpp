@@ -71,7 +71,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/Bitstakecoin.conf are parsed in qt/BS.cpp's main()
+    // If Qt is used, parameters/Stakework.conf are parsed in qt/BS.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
