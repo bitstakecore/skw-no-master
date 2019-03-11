@@ -11,7 +11,7 @@
 
 #define STAKE_TIMESTAMP_MASK 	7
 #if defined(HAVE_CONFIG_H)
-#include "config/BS-config.h"
+#include "config/SKW-config.h"
 #endif
 
 #include "bignum.h"

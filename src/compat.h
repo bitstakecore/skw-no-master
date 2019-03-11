@@ -7,7 +7,7 @@
 #define BITCOIN_COMPAT_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/BS-config.h"
+#include "config/SKW-config.h"
 #endif
 
 #ifdef WIN32
