@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The BS Core developers
+// Copyright (c) 2018 The SKW Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,18 +20,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BS);
-    unitlist.append(mBS);
-    unitlist.append(uBS);
+    unitlist.append(SKW);
+    unitlist.append(mSKW);
+    unitlist.append(uSKW);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case BS:
-    case mBS:
-    case uBS:
+    case SKW:
+    case mSKW:
+    case uSKW:
         return true;
     default:
         return false;
@@ -41,11 +41,11 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case BS:
-        return QString("BS");
-    case mBS:
+    case SKW:
+        return QString("SKW");
+    case mSKW:
         return QString("mion");
-    case uBS:
+    case uSKW:
         return QString::fromUtf8("uion");
     default:
         return QString("???");
@@ -56,23 +56,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BS:
-            return QString("BS");
-        case mBS:
-            return QString("mBS");
-        case uBS:
-            return QString::fromUtf8("μBS");
+        case SKW:
+            return QString("SKW");
+        case mSKW:
+            return QString("mSKW");
+        case uSKW:
+            return QString::fromUtf8("μSKW");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BS:
-            return QString("tBS");
-        case mBS:
-            return QString("mtBS");
-        case uBS:
-            return QString::fromUtf8("μtBS");
+        case SKW:
+            return QString("tSKW");
+        case mSKW:
+            return QString("mtSKW");
+        case uSKW:
+            return QString::fromUtf8("μtSKW");
         default:
             return QString("???");
         }
@@ -83,23 +83,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BS:
-            return QString("BS");
-        case mBS:
-            return QString("Milli-BS (1 / 1" THIN_SP_UTF8 "000)");
-        case uBS:
-            return QString("Micro-BS (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case SKW:
+            return QString("SKW");
+        case mSKW:
+            return QString("Milli-SKW (1 / 1" THIN_SP_UTF8 "000)");
+        case uSKW:
+            return QString("Micro-SKW (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BS:
-            return QString("TestBSs");
-        case mBS:
-            return QString("Milli-TestBS (1 / 1" THIN_SP_UTF8 "000)");
-        case uBS:
-            return QString("Micro-TestBS (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case SKW:
+            return QString("TestSKWs");
+        case mSKW:
+            return QString("Milli-TestSKW (1 / 1" THIN_SP_UTF8 "000)");
+        case uSKW:
+            return QString("Micro-TestSKW (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -109,11 +109,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case BS:
+    case SKW:
         return 100000000;
-    case mBS:
+    case mSKW:
         return 100000;
-    case uBS:
+    case uSKW:
         return 100;
     default:
         return 100000000;
@@ -123,11 +123,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case BS:
+    case SKW:
         return 8;
-    case mBS:
+    case mSKW:
         return 5;
-    case uBS:
+    case uSKW:
         return 2;
     default:
         return 0;

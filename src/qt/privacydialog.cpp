@@ -29,7 +29,7 @@ PrivacyDialog::PrivacyDialog(QWidget* parent) : QDialog(parent),
     nDisplayUnit = 0; // just make sure it's not unitialized
     ui->setupUi(this);
 
-    // "Spending 999999 xBS ought to be enough for anybody." - Bill Gates, 2017
+    // "Spending 999999 xSKW ought to be enough for anybody." - Bill Gates, 2017
     ui->labelMintAmountValue->setValidator( new QIntValidator(0, 999999, this) );
 
     // Default texts for (mini-) coincontrol
@@ -76,7 +76,7 @@ PrivacyDialog::PrivacyDialog(QWidget* parent) : QDialog(parent),
     ui->labelZsupplyText1000->setText(tr("Denom. <b>1000</b>:"));
     ui->labelZsupplyText5000->setText(tr("Denom. <b>5000</b>:"));
     
-    // BS settings
+    // SKW settings
     QSettings settings;
     if (!settings.contains("nSecurityLevel")){
         nSecurityLevel = 42;

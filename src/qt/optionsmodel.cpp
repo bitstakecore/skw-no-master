@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The BS Core developers
+// Copyright (c) 2018 The SKW Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -63,7 +63,7 @@ void OptionsModel::Init()
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", BitcoinUnits::BS);
+        settings.setValue("nDisplayUnit", BitcoinUnits::SKW);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
     if (!settings.contains("strThirdPartyTxUrls"))
@@ -145,8 +145,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nPreferredDenom"))
         SoftSetArg("-preferredDenom", settings.value("nPreferredDenom").toString().toStdString());
-    if (settings.contains("nAnonymizeBSAmount"))
-        SoftSetArg("-anonymizeionamount", settings.value("nAnonymizeBSAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeSKWAmount"))
+        SoftSetArg("-anonymizeionamount", settings.value("nAnonymizeSKWAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -157,7 +157,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in BS.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in SKW.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())

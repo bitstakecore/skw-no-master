@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The BS Core developers
+// Copyright (c) 2018 The SKW Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -36,7 +36,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::BS)
+    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::SKW)
     {
     }
 
@@ -165,7 +165,7 @@ OverviewPage::~OverviewPage()
     delete ui;
 }
 
-void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBalance, QString& sBSPercentage, QString& sxBSPercentage)
+void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBalance, QString& sSKWPercentage, QString& sxSKWPercentage)
 {
     int nPrecision = 2;
     double dzPercentage = 0.0;
@@ -184,8 +184,8 @@ void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBala
 
     double dPercentage = 100.0 - dzPercentage;
     
-    sxBSPercentage = "(" + QLocale(QLocale::system()).toString(dzPercentage, 'f', nPrecision) + " %)";
-    sBSPercentage = "(" + QLocale(QLocale::system()).toString(dPercentage, 'f', nPrecision) + " %)";
+    sxSKWPercentage = "(" + QLocale(QLocale::system()).toString(dzPercentage, 'f', nPrecision) + " %)";
+    sSKWPercentage = "(" + QLocale(QLocale::system()).toString(dPercentage, 'f', nPrecision) + " %)";
     
 }
 
@@ -209,23 +209,23 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
         nLockedBalance = pwalletMain->GetLockedCoins();
         nWatchOnlyLockedBalance = pwalletMain->GetLockedWatchOnlyBalance();
     }
-    // BS Balance
+    // SKW Balance
     CAmount nTotalBalance = balance + unconfirmedBalance;
-    CAmount BSAvailableBalance = balance - immatureBalance - nLockedBalance;
+    CAmount SKWAvailableBalance = balance - immatureBalance - nLockedBalance;
     CAmount nTotalWatchBalance = watchOnlyBalance + watchUnconfBalance + watchImmatureBalance;    
     CAmount nUnlockedBalance = nTotalBalance - nLockedBalance;
-    // xBS Balance
+    // xSKW Balance
     CAmount matureZerocoinBalance = zerocoinBalance - immatureZerocoinBalance;
     // Percentages
     QString szPercentage = "";
     QString sPercentage = "";
     getPercentage(nUnlockedBalance, zerocoinBalance, sPercentage, szPercentage);
     // Combined balances
-    CAmount availableTotalBalance = BSAvailableBalance + matureZerocoinBalance;
+    CAmount availableTotalBalance = SKWAvailableBalance + matureZerocoinBalance;
     CAmount sumTotalBalance = nTotalBalance + zerocoinBalance;
 
-    // BS labels
-    ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, BSAvailableBalance, false, BitcoinUnits::separatorAlways));
+    // SKW labels
+    ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, SKWAvailableBalance, false, BitcoinUnits::separatorAlways));
     ui->labelUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedBalance, false, BitcoinUnits::separatorAlways));
     ui->labelImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, immatureBalance, false, BitcoinUnits::separatorAlways));
     ui->labelLockedBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nLockedBalance, false, BitcoinUnits::separatorAlways));
@@ -238,7 +238,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     ui->labelWatchLocked->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nWatchOnlyLockedBalance, false, BitcoinUnits::separatorAlways));
     ui->labelWatchTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nTotalWatchBalance, false, BitcoinUnits::separatorAlways));
 
-    // xBS labels
+    // xSKW labels
     //ui->labelzBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, zerocoinBalance, false, BitcoinUnits::separatorAlways));
     //ui->labelzBalanceUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedZerocoinBalance, false, BitcoinUnits::separatorAlways));
     //ui->labelzBalanceMature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, matureZerocoinBalance, false, BitcoinUnits::separatorAlways));
@@ -249,11 +249,11 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     //ui->labelTotalz->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, sumTotalBalance, false, BitcoinUnits::separatorAlways));
 
     // Percentage labels
-    ui->labelBSPercent->setText(sPercentage);
-    //ui->labelxBSPercent->setText(szPercentage);
+    ui->labelSKWPercent->setText(sPercentage);
+    //ui->labelxSKWPercent->setText(szPercentage);
 
     // Adjust bubble-help according to AutoMint settings
-    QString automintHelp = tr("Current percentage of xBS.\nIf AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).\n");
+    QString automintHelp = tr("Current percentage of xSKW.\nIf AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).\n");
 
     // Only show most balances if they are non-zero for the sake of simplicity
     QSettings settings;
@@ -261,39 +261,39 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     bool showSumAvailable = settingShowAllBalances || sumTotalBalance != availableTotalBalance;
     //ui->labelBalanceTextz->setVisible(showSumAvailable);
     //ui->labelBalancez->setVisible(showSumAvailable);
-    bool showBSAvailable = settingShowAllBalances || BSAvailableBalance != nTotalBalance;
-    bool showWatchOnlyBSAvailable = watchOnlyBalance != nTotalWatchBalance;
-    bool showBSPending = settingShowAllBalances || unconfirmedBalance != 0;
-    bool showWatchOnlyBSPending = watchUnconfBalance != 0;
-    bool showBSLocked = settingShowAllBalances || nLockedBalance != 0;
-    bool showWatchOnlyBSLocked = nWatchOnlyLockedBalance != 0;
+    bool showSKWAvailable = settingShowAllBalances || SKWAvailableBalance != nTotalBalance;
+    bool showWatchOnlySKWAvailable = watchOnlyBalance != nTotalWatchBalance;
+    bool showSKWPending = settingShowAllBalances || unconfirmedBalance != 0;
+    bool showWatchOnlySKWPending = watchUnconfBalance != 0;
+    bool showSKWLocked = settingShowAllBalances || nLockedBalance != 0;
+    bool showWatchOnlySKWLocked = nWatchOnlyLockedBalance != 0;
     bool showImmature = settingShowAllBalances || immatureBalance != 0;
     bool showWatchOnlyImmature = watchImmatureBalance != 0;
     bool showWatchOnly = nTotalWatchBalance != 0;
-    ui->labelBalance->setVisible(showBSAvailable || showWatchOnlyBSAvailable);
-    ui->labelBalanceText->setVisible(showBSAvailable || showWatchOnlyBSAvailable);
-    ui->labelWatchAvailable->setVisible(showBSAvailable && showWatchOnly);
-    ui->labelUnconfirmed->setVisible(showBSPending || showWatchOnlyBSPending);
-    ui->labelPendingText->setVisible(showBSPending || showWatchOnlyBSPending);
-    ui->labelWatchPending->setVisible(showBSPending && showWatchOnly);
-    ui->labelLockedBalance->setVisible(showBSLocked || showWatchOnlyBSLocked);
-    ui->labelLockedBalanceText->setVisible(showBSLocked || showWatchOnlyBSLocked);
-    ui->labelWatchLocked->setVisible(showBSLocked && showWatchOnly);
+    ui->labelBalance->setVisible(showSKWAvailable || showWatchOnlySKWAvailable);
+    ui->labelBalanceText->setVisible(showSKWAvailable || showWatchOnlySKWAvailable);
+    ui->labelWatchAvailable->setVisible(showSKWAvailable && showWatchOnly);
+    ui->labelUnconfirmed->setVisible(showSKWPending || showWatchOnlySKWPending);
+    ui->labelPendingText->setVisible(showSKWPending || showWatchOnlySKWPending);
+    ui->labelWatchPending->setVisible(showSKWPending && showWatchOnly);
+    ui->labelLockedBalance->setVisible(showSKWLocked || showWatchOnlySKWLocked);
+    ui->labelLockedBalanceText->setVisible(showSKWLocked || showWatchOnlySKWLocked);
+    ui->labelWatchLocked->setVisible(showSKWLocked && showWatchOnly);
     ui->labelImmature->setVisible(showImmature || showWatchOnlyImmature); // for symmetry reasons also show immature label when the watch-only one is shown
     ui->labelImmatureText->setVisible(showImmature || showWatchOnlyImmature);
     ui->labelWatchImmature->setVisible(showImmature && showWatchOnly); // show watch-only immature balance
-    bool showxBSAvailable = settingShowAllBalances || zerocoinBalance != matureZerocoinBalance;
-    bool showxBSUnconfirmed = settingShowAllBalances || unconfirmedZerocoinBalance != 0;
-    bool showxBSImmature = settingShowAllBalances || immatureZerocoinBalance != 0;
-    ui->labelzBalanceMature->setVisible(showxBSAvailable);
-    ui->labelzBalanceMatureText->setVisible(showxBSAvailable);
-    ui->labelzBalanceUnconfirmed->setVisible(showxBSUnconfirmed);
-    ui->labelzBalanceUnconfirmedText->setVisible(showxBSUnconfirmed);
-    ui->labelzBalanceImmature->setVisible(showxBSImmature);
-    ui->labelzBalanceImmatureText->setVisible(showxBSImmature);
+    bool showxSKWAvailable = settingShowAllBalances || zerocoinBalance != matureZerocoinBalance;
+    bool showxSKWUnconfirmed = settingShowAllBalances || unconfirmedZerocoinBalance != 0;
+    bool showxSKWImmature = settingShowAllBalances || immatureZerocoinBalance != 0;
+    ui->labelzBalanceMature->setVisible(showxSKWAvailable);
+    ui->labelzBalanceMatureText->setVisible(showxSKWAvailable);
+    ui->labelzBalanceUnconfirmed->setVisible(showxSKWUnconfirmed);
+    ui->labelzBalanceUnconfirmedText->setVisible(showxSKWUnconfirmed);
+    ui->labelzBalanceImmature->setVisible(showxSKWImmature);
+    ui->labelzBalanceImmatureText->setVisible(showxSKWImmature);
     bool showPercentages = ! (zerocoinBalance == 0 && nTotalBalance == 0);
-    ui->labelBSPercent->setVisible(showPercentages);
-    //ui->labelxBSPercent->setVisible(showPercentages);
+    ui->labelSKWPercent->setVisible(showPercentages);
+    //ui->labelxSKWPercent->setVisible(showPercentages);
 
     static int cachedTxLocks = 0;
 
@@ -364,7 +364,7 @@ void OverviewPage::setWalletModel(WalletModel* model)
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("BS")
+    // update the display unit, to not use the default ("SKW")
     updateDisplayUnit();
 }
 

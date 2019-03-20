@@ -15,10 +15,10 @@ static const struct {
     const char* titleAddText;
     const char* splashImage;
 } network_styles[] = {
-    {"main", QAPP_APP_NAME_DEFAULT, ":/icons/BS", "", ":/images/splash"},
-    {"test", QAPP_APP_NAME_TESTNET, ":/icons/BS_testnet", QT_TRANSLATE_NOOP("SplashScreen", "[testnet]"), ":/images/splash_testnet"},
-    {"regtest", QAPP_APP_NAME_TESTNET, ":/icons/BS_regtest", "[regtest]", ":/images/splash_regtest"},
-    {"unittest", QAPP_APP_NAME_TESTNET, ":/icons/BS_unittest", "[unittest]", ":/images/splash_unittest"}};
+    {"main", QAPP_APP_NAME_DEFAULT, ":/icons/SKW", "", ":/images/splash"},
+    {"test", QAPP_APP_NAME_TESTNET, ":/icons/SKW_testnet", QT_TRANSLATE_NOOP("SplashScreen", "[testnet]"), ":/images/splash_testnet"},
+    {"regtest", QAPP_APP_NAME_TESTNET, ":/icons/SKW_regtest", "[regtest]", ":/images/splash_regtest"},
+    {"unittest", QAPP_APP_NAME_TESTNET, ":/icons/SKW_unittest", "[unittest]", ":/images/splash_unittest"}};
 static const unsigned network_styles_count = sizeof(network_styles) / sizeof(*network_styles);
 
 // titleAddText needs to be const char* for tr()

@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The BS Core developers
+// Copyright (c) 2018 The SKW Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -175,7 +175,7 @@ bool Intro::pickDataDirectory()
                 TryCreateDirectory(GUIUtil::qstringToBoostPath(dataDir));
                 break;
             } catch (fs::filesystem_error& e) {
-                QMessageBox::critical(0, tr("BS Core"),
+                QMessageBox::critical(0, tr("SKW Core"),
                     tr("Error: Specified data directory \"%1\" cannot be created.").arg(dataDir));
                 /* fall through, back to choosing screen */
             }
@@ -185,7 +185,7 @@ bool Intro::pickDataDirectory()
     }
     /* Only override -datadir if different from the default, to make it possible to
      * override -datadir in the Stakework.conf file in the default data directory
-     * (to be consistent with BSd behavior)
+     * (to be consistent with SKWd behavior)
      */
     if (dataDir != getDefaultDataDirectory())
         SoftSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting

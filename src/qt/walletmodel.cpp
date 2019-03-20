@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The BS Core developers
+// Copyright (c) 2018 The SKW Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -265,7 +265,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
                 return InvalidAmount;
             }
             total += subtotal;
-        } else { // User-entered BS address / amount:
+        } else { // User-entered SKW address / amount:
             if (!validateAddress(rcp.address)) {
                 return InvalidAddress;
             }
@@ -302,7 +302,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
 
 
         if (recipients[0].useSwiftTX && total > GetSporkValue(SPORK_3_SWIFTTX_MAX_VALUE) * COIN) {
-            emit message(tr("Send Coins"), tr("SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 BS.").arg(GetSporkValue(SPORK_3_SWIFTTX_MAX_VALUE)),
+            emit message(tr("Send Coins"), tr("SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 SKW.").arg(GetSporkValue(SPORK_3_SWIFTTX_MAX_VALUE)),
                 CClientUIInterface::MSG_ERROR);
             return TransactionCreationFailed;
         }
@@ -310,7 +310,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
         transaction.setTransactionFee(nFeeRequired);
 
         if (recipients[0].useSwiftTX && newTx->GetValueOut() > GetSporkValue(SPORK_3_SWIFTTX_MAX_VALUE) * COIN) {
-            emit message(tr("Send Coins"), tr("SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 BS.").arg(GetSporkValue(SPORK_3_SWIFTTX_MAX_VALUE)),
+            emit message(tr("Send Coins"), tr("SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 SKW.").arg(GetSporkValue(SPORK_3_SWIFTTX_MAX_VALUE)),
                 CClientUIInterface::MSG_ERROR);
             return TransactionCreationFailed;
         }
@@ -349,7 +349,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction& tran
                 std::string value;
                 rcp.paymentRequest.SerializeToString(&value);
                 newTx->vOrderForm.push_back(make_pair(key, value));
-            } else if (!rcp.message.isEmpty()) // Message from normal BS:URI (BS:XyZ...?message=example)
+            } else if (!rcp.message.isEmpty()) // Message from normal SKW:URI (SKW:XyZ...?message=example)
             {
                 newTx->vOrderForm.push_back(make_pair("Message", rcp.message.toStdString()));
             }
@@ -519,9 +519,9 @@ static void NotifyMultiSigChanged(WalletModel* walletmodel, bool fHaveMultiSig)
 }
 
 
-static void NotifyxBSReset(WalletModel* walletmodel)
+static void NotifyxSKWReset(WalletModel* walletmodel)
 {
-    qDebug() << "NotifyxBSReset";
+    qDebug() << "NotifyxSKWReset";
     QMetaObject::invokeMethod(walletmodel, "checkBalanceChanged", Qt::QueuedConnection);
 }
 
@@ -534,7 +534,7 @@ void WalletModel::subscribeToCoreSignals()
     wallet->ShowProgress.connect(boost::bind(ShowProgress, this, _1, _2));
     wallet->NotifyWatchonlyChanged.connect(boost::bind(NotifyWatchonlyChanged, this, _1));
     wallet->NotifyMultiSigChanged.connect(boost::bind(NotifyMultiSigChanged, this, _1));
-    wallet->NotifyxBSReset.connect(boost::bind(NotifyxBSReset, this));
+    wallet->NotifyxSKWReset.connect(boost::bind(NotifyxSKWReset, this));
 }
 
 void WalletModel::unsubscribeFromCoreSignals()
@@ -546,7 +546,7 @@ void WalletModel::unsubscribeFromCoreSignals()
     wallet->ShowProgress.disconnect(boost::bind(ShowProgress, this, _1, _2));
     wallet->NotifyWatchonlyChanged.disconnect(boost::bind(NotifyWatchonlyChanged, this, _1));
     wallet->NotifyMultiSigChanged.disconnect(boost::bind(NotifyMultiSigChanged, this, _1));
-    wallet->NotifyxBSReset.disconnect(boost::bind(NotifyxBSReset, this));
+    wallet->NotifyxSKWReset.disconnect(boost::bind(NotifyxSKWReset, this));
 }
 
 // WalletModel::UnlockContext implementation
