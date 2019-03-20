@@ -1,10 +1,10 @@
-[BS.svg]
+[SKW.svg]
 ---------
-Original source, BS-coin copyrights.
+Original source, SKW-coin copyrights.
 
-[BS_daemon.svg]
+[SKW_daemon.svg]
 ---------------
-Created from [BS.svg]. Create with inkscape using electrize filter. To recreate, run this filter with following settings:
+Created from [SKW.svg]. Create with inkscape using electrize filter. To recreate, run this filter with following settings:
 
 Filter:
 
@@ -19,23 +19,23 @@ Electrize:
 
 Metadata:
 
- - Title: 'BS Coin core daemon vector graphic'
+ - Title: 'SKW Coin core daemon vector graphic'
  - Date: 'GMT: Monday, March 19, 2018 9:54:40 PM'
  - Creator: 'CEVAP'
- - Rights: 'https://raw.githubusercontent.com/cevap/BS/master/COPYING'
+ - Rights: 'https://raw.githubusercontent.com/cevap/SKW/master/COPYING'
  - Publisher: 'CEVAP'
- - Identifier: 'BSMainDaemon'
- - Source: 'https://raw.githubusercontent.com/cevap/BS/master/src/qt/res/src/BS.svg'
- - Relation: 'https://raw.githubusercontent.com/cevap/BS/master/src/qt/res/src/BS.svg'
+ - Identifier: 'SKWMainDaemon'
+ - Source: 'https://raw.githubusercontent.com/cevap/SKW/master/src/qt/res/src/SKW.svg'
+ - Relation: 'https://raw.githubusercontent.com/cevap/SKW/master/src/qt/res/src/SKW.svg'
  - Language: 'English'
- - Keywords: 'BS-coin, BS, core, daemon'
- - Coverage: 'BS main network, daemon'
- - Description: '🗺️BS Digital Currency ©️ 👯👯 👛 (by 🐼CEVAP🐼) CE source code (Community Edition)'
+ - Keywords: 'SKW-coin, SKW, core, daemon'
+ - Coverage: 'SKW main network, daemon'
+ - Description: '🗺️SKW Digital Currency ©️ 👯👯 👛 (by 🐼CEVAP🐼) CE source code (Community Edition)'
  - Contributors: 'CEVAP'
 
-[BS_testnet.svg]
+[SKW_testnet.svg]
 ----------------------
-Created from [BS.svg]. Create with inkscape using electrize filter. To recreate, run this filter with following settings:
+Created from [SKW.svg]. Create with inkscape using electrize filter. To recreate, run this filter with following settings:
 
 Filter:
 
@@ -61,9 +61,9 @@ Optimize PNG (I used gimp):
     - Länge: `5`
     - Winkel: `10`
 
-[BS_testnet_daemon.svg]
+[SKW_testnet_daemon.svg]
 ----------------------
-Created from [BS.svg]. Create with inkscape using electrize filter. To recreate, run this filter with following settings:
+Created from [SKW.svg]. Create with inkscape using electrize filter. To recreate, run this filter with following settings:
 
 Filter:
 
