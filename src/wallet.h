@@ -586,7 +586,7 @@ public:
     boost::signals2::signal<void(bool fHaveMultiSig)> NotifyMultiSigChanged;
 
     /** xBS reset */
-    boost::signals2::signal<void()> NotifyxBSReset;
+    boost::signals2::signal<void()> NotifyxSKWReset;
 };
 
 
