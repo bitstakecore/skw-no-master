@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your BS addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your SKW addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your BS addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your SKW addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -221,7 +221,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>BS will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BSs from being stolen by malware infecting your computer.</source>
+        <source>SKW will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SKWs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -231,7 +231,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SKW&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -307,7 +307,7 @@
     </message>
     <message>
         <location line="+6"/>
-        <source>Enter a BS Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a SKW Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -318,7 +318,7 @@
     </message>
     <message>
         <location line="-355"/>
-        <source>The BS address to sign the message with</source>
+        <source>The SKW address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -360,7 +360,7 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BS address</source>
+        <source>Sign the message to prove you own this SKW address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -391,12 +391,12 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>The BS address the message was signed with</source>
+        <source>The SKW address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+29"/>
-        <source>Verify the message to ensure it was signed with the specified BS address</source>
+        <source>Verify the message to ensure it was signed with the specified SKW address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -546,7 +546,7 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Privacy Actions for xBS</source>
+        <source>Privacy Actions for xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -811,17 +811,17 @@
     <message>
         <location line="-427"/>
         <location line="+890"/>
-        <source>BS Core</source>
+        <source>SKW Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-707"/>
-        <source>Send coins to a BS address</source>
+        <source>Send coins to a SKW address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Request payments (generates QR codes and BS: URIs)</source>
+        <source>Request payments (generates QR codes and SKW: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -841,27 +841,27 @@
     </message>
     <message>
         <location line="+31"/>
-        <source>&amp;About BS Core</source>
+        <source>&amp;About SKW Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about BS Core</source>
+        <source>Show information about SKW Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Modify configuration options for BS</source>
+        <source>Modify configuration options for SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>Sign messages with your BS addresses to prove you own them</source>
+        <source>Sign messages with your SKW addresses to prove you own them</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified BS addresses</source>
+        <source>Verify messages to ensure they were signed with specified SKW addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -901,7 +901,7 @@
     </message>
     <message>
         <location line="+17"/>
-        <source>Open a BS: URI or payment request</source>
+        <source>Open a SKW: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -916,17 +916,17 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Show the BS Core help message to get a list with possible BS command-line options</source>
+        <source>Show the SKW Core help message to get a list with possible SKW command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+214"/>
-        <source>BS Core client</source>
+        <source>SKW Core client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location line="+212"/>
-        <source>%n active connection(s) to BS network</source>
+        <source>%n active connection(s) to SKW network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1496,7 +1496,7 @@ Address: %4
     </message>
     <message>
         <location line="+67"/>
-        <source>The entered address &quot;%1&quot; is not a valid BS address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid SKW address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1552,7 +1552,7 @@ Address: %4
     </message>
     <message>
         <location line="+0"/>
-        <source>BS Core</source>
+        <source>SKW Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1563,7 +1563,7 @@ Address: %4
     </message>
     <message>
         <location line="+4"/>
-        <source>About BS Core</source>
+        <source>About SKW Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1621,17 +1621,17 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to BS Core.</source>
+        <source>Welcome to SKW Core.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where BS Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where SKW Core will store its data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>BS Core will download and store a copy of the BS block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>SKW Core will download and store a copy of the SKW block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1646,7 +1646,7 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+77"/>
-        <source>BS Core</source>
+        <source>SKW Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1822,8 +1822,8 @@ Address: %4
     </message>
     <message>
         <location line="+16"/>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other BS addresses after it matures.
-To Add: enter percentage to give and BS address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other SKW addresses after it matures.
+To Add: enter percentage to give and SKW address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
         <translation type="unfinished"></translation>
@@ -2078,7 +2078,7 @@ Please be patient after clicking import.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Add destinations to send BS to</source>
+        <source>Add destinations to send SKW to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2210,12 +2210,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 10000 BS</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 10000 BS</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2225,12 +2225,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is the quickest and will cost about ~0.025 BS to anonymize 10000 BS</source>
+        <source>This option is the quickest and will cost about ~0.025 SKW to anonymize 10000 SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 BS to anonymize 10000 BS</source>
+        <source>This option is moderately fast and will cost about 0.05 SKW to anonymize 10000 SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2240,7 +2240,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+13"/>
-        <source>0.1 BS per 10000 BS you anonymize.</source>
+        <source>0.1 SKW per 10000 SKW you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2252,17 +2252,17 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="-27"/>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening BS&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening SKW&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening BS&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening SKW&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening BS&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening SKW&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2338,7 +2338,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+33"/>
-        <source>Automatically open the BS client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the SKW client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2363,12 +2363,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="-176"/>
-        <source>Automatically start BS after logging in to the system.</source>
+        <source>Automatically start SKW after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BS on system login</source>
+        <source>&amp;Start SKW on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2403,7 +2403,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+192"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BS.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting SKW.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2419,28 +2419,28 @@ https://www.transifex.com/cevap/cevap-translations</source>
     </message>
     <message>
         <location line="-133"/>
-        <source>Percentage of incoming BS which get automatically converted to xBS via Zerocoin Protocol (min: 10%)</source>
+        <source>Percentage of incoming SKW which get automatically converted to xSKW via Zerocoin Protocol (min: 10%)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Percentage of autominted xBS</source>
+        <source>Percentage of autominted xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
         <location line="+16"/>
-        <source>Wait with automatic conversion to Zerocoin until enough BS for this denomination is available</source>
+        <source>Wait with automatic conversion to Zerocoin until enough SKW for this denomination is available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-13"/>
-        <source>Preferred Automint xBS Denomination</source>
+        <source>Preferred Automint xSKW Denomination</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+114"/>
-        <source>Connect to the BS network through a SOCKS5 proxy.</source>
+        <source>Connect to the SKW network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2605,7 +2605,7 @@ https://www.transifex.com/cevap/cevap-translations</source>
     </message>
     <message>
         <location line="+43"/>
-        <source>BS Balances</source>
+        <source>SKW Balances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2644,7 +2644,7 @@ https://www.transifex.com/cevap/cevap-translations</source>
     <message>
         <location line="-153"/>
         <location line="+1393"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BS network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SKW network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2706,17 +2706,17 @@ https://www.transifex.com/cevap/cevap-translations</source>
     </message>
     <message>
         <location line="+36"/>
-        <source>BS:</source>
+        <source>SKW:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+35"/>
-        <source>xBS:</source>
+        <source>xSKW:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Current percentage of xBS.
+        <source>Current percentage of xSKW.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2729,7 +2729,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
     <message>
         <location line="-46"/>
         <location line="+13"/>
-        <source>Locked BS or Masternode collaterals. These are excluded from xBS minting.</source>
+        <source>Locked SKW or Masternode collaterals. These are excluded from xSKW minting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2738,7 +2738,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
         <location line="+189"/>
         <location line="+31"/>
         <location line="+44"/>
-        <source>0.000 000 00 BS</source>
+        <source>0.000 000 00 SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2749,7 +2749,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
     <message>
         <location line="+7"/>
         <location line="+10"/>
-        <source>Unlocked BSs. These can be used for xBS minting.</source>
+        <source>Unlocked SKWs. These can be used for xSKW minting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2766,7 +2766,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
         <location line="+14"/>
         <location line="+104"/>
         <source>Mature: more than 20 confirmation and more than 3 mints of the same denomination after it was minted.
-These xBS are spendable.</source>
+These xSKW are spendable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2777,7 +2777,7 @@ These xBS are spendable.</source>
     <message>
         <location line="+23"/>
         <location line="+35"/>
-        <source>All available xBS, unconfirmed and immature xBS included.</source>
+        <source>All available xSKW, unconfirmed and immature xSKW included.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2807,7 +2807,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
     </message>
     <message>
         <location line="+93"/>
-        <source>Current percentage of xBS.
+        <source>Current percentage of xSKW.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).
 </source>
         <translation type="unfinished"></translation>
@@ -2865,12 +2865,12 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="-108"/>
-        <source>Cannot start BS: click-to-pay handler</source>
+        <source>Cannot start SKW: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+114"/>
-        <source>URI cannot be parsed! This can be caused by an invalid BS address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid SKW address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2973,12 +2973,12 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     <name>PrivacyDialog</name>
     <message>
         <location filename="../forms/privacydialog.ui" line="+55"/>
-        <source>BS which were anonymized via Zerocin Protocol</source>
+        <source>SKW which were anonymized via Zerocin Protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Zerocoin BS (xBS)</source>
+        <source>Zerocoin SKW (xSKW)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2988,13 +2988,13 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+10"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BS network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SKW network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+52"/>
         <location line="+46"/>
-        <source>Enter an amount of BS to convert to xBS</source>
+        <source>Enter an amount of SKW to convert to xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3014,7 +3014,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     <message>
         <location line="-349"/>
         <location line="+629"/>
-        <source>xBS</source>
+        <source>xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3029,7 +3029,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+13"/>
-        <source>0.000 000 00 BS</source>
+        <source>0.000 000 00 SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3074,12 +3074,12 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+45"/>
-        <source>xBS Control</source>
+        <source>xSKW Control</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>xBS Selected:</source>
+        <source>xSKW Selected:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3104,7 +3104,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+7"/>
-        <source>Available (mature and spendable) xBS for spending</source>
+        <source>Available (mature and spendable) xSKW for spending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3114,15 +3114,15 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+16"/>
-        <source>Available (mature and spendable) xBS for spending
+        <source>Available (mature and spendable) xSKW for spending
 
-xBS are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
+xSKW are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+417"/>
-        <source>0 xBS</source>
+        <source>0 xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3147,7 +3147,7 @@ xBS are mature when they have more than 20 confirmations AND more than 2 mints o
     </message>
     <message>
         <location line="+27"/>
-        <source>The BS address to send the payment to. Creates local payment to yourself when empty.</source>
+        <source>The SKW address to send the payment to. Creates local payment to yourself when empty.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3213,7 +3213,7 @@ xBS are mature when they have more than 20 confirmations AND more than 2 mints o
     <message>
         <location line="+62"/>
         <location line="+38"/>
-        <source>Total Balance including unconfirmed and immature xBS</source>
+        <source>Total Balance including unconfirmed and immature xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3424,13 +3424,13 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
     <message>
         <location line="+45"/>
         <location line="+3"/>
-        <source>xBS is currently disabled due to maintenance.</source>
+        <source>xSKW is currently disabled due to maintenance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+50"/>
         <location line="+113"/>
-        <source>xBS is currently undergoing maintenance.</source>
+        <source>xSKW is currently undergoing maintenance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3455,7 +3455,7 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
     </message>
     <message>
         <location line="+0"/>
-        <source> xBS in </source>
+        <source> xSKW in </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3497,7 +3497,7 @@ Please be patient...</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Invalid BS Address</source>
+        <source>Invalid SKW Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3567,7 +3567,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+15"/>
-        <source>xBS Spend #: </source>
+        <source>xSKW Spend #: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3597,7 +3597,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+3"/>
-        <source>xBS Mint</source>
+        <source>xSKW Mint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3625,7 +3625,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+113"/>
-        <source>Enter a BS address (e.g. %1)</source>
+        <source>Enter a SKW address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3820,7 +3820,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+79"/>
-        <source>Open the BS debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the SKW debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4047,7 +4047,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="-36"/>
-        <source>Welcome to the BS RPC console.</source>
+        <source>Welcome to the SKW RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4163,12 +4163,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="-37"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BS network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the SKW network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the BS network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the SKW network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4451,7 +4451,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+7"/>
-        <source>0 BS</source>
+        <source>0 SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4521,18 +4521,18 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+772"/>
-        <source>If the custom fee is set to 1000 uBSs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uBSs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uBSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uSKWs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uSKWs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uSKWs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>If the custom fee is set to 1000 uBSs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uBSs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uBSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uSKWs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uSKWs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uSKWs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for BS transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for SKW transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4592,7 +4592,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+35"/>
-        <source>Anonymized BS</source>
+        <source>Anonymized SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4663,7 +4663,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+622"/>
-        <source>Warning: Invalid BS address</source>
+        <source>Warning: Invalid SKW address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4802,7 +4802,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+18"/>
-        <source>The BS address to send the payment to</source>
+        <source>The SKW address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4856,7 +4856,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the BS: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BS network.</source>
+        <source>A message that was attached to the SKW: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the SKW network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4891,7 +4891,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+75"/>
-        <source>BS Core is shutting down...</source>
+        <source>SKW Core is shutting down...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4919,7 +4919,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+18"/>
-        <source>The BS address to sign the message with</source>
+        <source>The SKW address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4961,17 +4961,17 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BS address</source>
+        <source>Sign the message to prove you own this SKW address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>
-        <source>The BS address the message was signed with</source>
+        <source>The SKW address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified BS address</source>
+        <source>Verify the message to ensure it was signed with the specified SKW address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5086,7 +5086,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>BS Core</source>
+        <source>SKW Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5106,7 +5106,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>The BS Core developers</source>
+        <source>The SKW Core developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5533,27 +5533,27 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+2"/>
-        <source>Converted BS to xBS</source>
+        <source>Converted SKW to xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Spent xBS</source>
+        <source>Spent xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Received BS from xBS</source>
+        <source>Received SKW from xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Minted Change as xBS from xBS Spend</source>
+        <source>Minted Change as xSKW from xSKW Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Converted xBS to BS</source>
+        <source>Converted xSKW to SKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5563,7 +5563,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+22"/>
-        <source>xBS Accumulator</source>
+        <source>xSKW Accumulator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5702,7 +5702,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>Received BS from xBS</source>
+        <source>Received SKW from xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5717,7 +5717,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>Zerocoin Spend, Change in xBS</source>
+        <source>Zerocoin Spend, Change in xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5874,7 +5874,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <message>
         <location line="-18"/>
         <location line="+9"/>
-        <source>SwiftX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 BS.</source>
+        <source>SwiftX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SKW.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5930,7 +5930,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <name>XIONControlDialog</name>
     <message>
         <location filename="../forms/xioncontroldialog.ui" line="+20"/>
-        <source>Select xBS to Spend</source>
+        <source>Select xSKW to Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5946,7 +5946,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="-7"/>
-        <source>xBS</source>
+        <source>xSKW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5961,9 +5961,9 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
 </context>
 <context>
-    <name>BS-core</name>
+    <name>SKW-core</name>
     <message>
-        <location filename="../BSstrings.cpp" line="+15"/>
+        <location filename="../SKWstrings.cpp" line="+15"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation type="unfinished">(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
     </message>
@@ -5999,7 +5999,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+2"/>
-        <source>Cannot obtain a lock on data directory %s. BS Core is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. SKW Core is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6064,12 +6064,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in BS/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in SKW/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in BS/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in SKW/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6194,22 +6194,22 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+4"/>
-        <source>To use BSd, or the -server option to BS-qt, you must set an rpcpassword in the configuration file:
+        <source>To use SKWd, or the -server option to SKW-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=BSrpc
+rpcuser=SKWrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;SKW Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Unable to bind to %s on this computer. BS Core is probably already running.</source>
+        <source>Unable to bind to %s on this computer. SKW Core is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6219,12 +6219,12 @@ for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+2"/>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 BS.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 SKW.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 BS.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 SKW.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6244,7 +6244,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BS Core will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong SKW Core will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6443,7 +6443,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Copyright (C) %i The BS Core Developers</source>
+        <source>Copyright (C) %i The SKW Core Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6558,7 +6558,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BS Core</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of SKW Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6638,7 +6638,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Fee (in BS/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in SKW/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6713,7 +6713,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Initialization sanity check failed. BS Core is shutting down.</source>
+        <source>Initialization sanity check failed. SKW Core is shutting down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6830,7 +6830,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+38"/>
-        <source>Disable all BS specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all SKW specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6840,7 +6840,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+2"/>
-        <source>Enable automatic wallet backups triggered after each xBS minting (0-1, default: %u)</source>
+        <source>Enable automatic wallet backups triggered after each xSKW minting (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7590,7 +7590,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BS Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart BS Core to complete</source>
+        <source>Wallet needed to be rewritten: restart SKW Core to complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
