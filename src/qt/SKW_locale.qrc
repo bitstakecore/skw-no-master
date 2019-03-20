@@ -1,7 +1,7 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/translations">
-        <file alias="en">locale/BS_en.qm</file>
-        <file alias="en_US">locale/BS_en_US.qm</file>
-        <file alias="zh_CN">locale/BS_zh_CN.qm</file>
+        <file alias="en">locale/SKW_en.qm</file>
+        <file alias="en_US">locale/SKW_en_US.qm</file>
+        <file alias="zh_CN">locale/SKW_zh_CN.qm</file>
     </qresource>
 </RCC>
