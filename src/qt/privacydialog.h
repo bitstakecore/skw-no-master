@@ -76,7 +76,7 @@ private:
 
     int nDisplayUnit;
     bool updateLabel(const QString& address);
-    void sendxBS();
+    void sendxSKW();
 
 private slots:
     void on_payTo_textChanged(const QString& address);
