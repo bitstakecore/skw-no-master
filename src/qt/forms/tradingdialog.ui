@@ -181,7 +181,7 @@
       <string>Asks</string>
      </property>
     </widget>
-    <widget class="QLabel" name="BSSupply">
+    <widget class="QLabel" name="SKWSupply">
      <property name="geometry">
       <rect>
        <x>540</x>
@@ -197,7 +197,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="BSDemand">
+    <widget class="QLabel" name="SKWDemand">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -432,7 +432,7 @@
     <attribute name="title">
      <string>Buy</string>
     </attribute>
-    <widget class="QPushButton" name="BuyBS">
+    <widget class="QPushButton" name="BuySKW">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -442,11 +442,11 @@
       </rect>
      </property>
      <property name="text">
-      <string>Buy BS</string>
+      <string>Buy SKW</string>
      </property>
      <property name="icon">
-      <iconset resource="../BS.qrc">
-       <normaloff>:/icons/BS</normaloff>:/icons/BS</iconset>
+      <iconset resource="../SKW.qrc">
+       <normaloff>:/icons/SKW</normaloff>:/icons/SKW</iconset>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
@@ -512,7 +512,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>BS</string>
+      <string>SKW</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -1704,10 +1704,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>BS</string>
+      <string>SKW</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UnitsInputBS">
+    <widget class="QLineEdit" name="UnitsInputSKW">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -1741,7 +1741,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QPushButton" name="SellBSBTN">
+    <widget class="QPushButton" name="SellSKWBTN">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -1751,11 +1751,11 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sell BS</string>
+      <string>Sell SKW</string>
      </property>
      <property name="icon">
-      <iconset resource="../BS">
-       <normaloff>:/icons/BS</normaloff>:/icons/BS</iconset>
+      <iconset resource="../SKW">
+       <normaloff>:/icons/SKW</normaloff>:/icons/SKW</iconset>
      </property>
     </widget>
     <widget class="QWidget" name="layoutWidget3">
@@ -1777,12 +1777,12 @@
          </font>
         </property>
         <property name="text">
-         <string>BS Available:</string>
+         <string>SKW Available:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="BSAvailableLabel">
+       <widget class="QLabel" name="SKWAvailableLabel">
         <property name="palette">
          <palette>
           <active>
@@ -2213,7 +2213,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="labelBS">
+       <widget class="QLabel" name="labelSKW">
         <property name="font">
          <font>
           <weight>75</weight>
@@ -2221,7 +2221,7 @@
          </font>
         </property>
         <property name="text">
-         <string>BS</string>
+         <string>SKW</string>
         </property>
        </widget>
       </item>
@@ -2733,7 +2733,7 @@
       <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="BSBalanceLabel">
+    <widget class="QLabel" name="SKWBalanceLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2762,7 +2762,7 @@
       </font>
      </property>
      <property name="text">
-      <string>BS Balance:</string>
+      <string>SKW Balance:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -2784,7 +2784,7 @@
       <string>BTC Balance:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="BSAvailableLabel_2">
+    <widget class="QLabel" name="SKWAvailableLabel_2">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2813,7 +2813,7 @@
       </font>
      </property>
      <property name="text">
-      <string>BS Available:</string>
+      <string>SKW Available:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -2832,10 +2832,10 @@
       </font>
      </property>
      <property name="text">
-      <string>BS Pending:</string>
+      <string>SKW Pending:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="BSPendingLabel">
+    <widget class="QLabel" name="SKWPendingLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2928,7 +2928,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex BS Deposit Address:</string>
+      <string>Bittrex SKW Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">
@@ -2941,11 +2941,11 @@
       </rect>
      </property>
      <property name="text">
-      <string>Generate BS Deposit Address</string>
+      <string>Generate SKW Deposit Address</string>
      </property>
      <property name="icon">
-      <iconset resource="../BS.qrc">
-       <normaloff>:/icons/BS</normaloff>:/icons/BS</iconset>
+      <iconset resource="../SKW.qrc">
+       <normaloff>:/icons/SKW</normaloff>:/icons/SKW</iconset>
      </property>
     </widget>
     <widget class="QLabel" name="DepositAddressLabel">
@@ -3155,7 +3155,7 @@
        <string notr="true">border: 1px solid #61696c;margin-left:4px;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnConvertBS">
+     <widget class="QPushButton" name="btnConvertSKW">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -3206,7 +3206,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../BS.qrc">:/icons/transaction_1</pixmap>
+       <pixmap resource="../SKW.qrc">:/icons/transaction_1</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -3253,8 +3253,8 @@
       <string>Update API Keys</string>
      </property>
      <property name="icon">
-      <iconset resource="../BS.qrc">
-       <normaloff>:/icons/BS</normaloff>:/icons/BS</iconset>
+      <iconset resource="../SKW.qrc">
+       <normaloff>:/icons/SKW</normaloff>:/icons/SKW</iconset>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
@@ -3408,7 +3408,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../BS.qrc"/>
+  <include location="../SKW.qrc"/>
  </resources>
  <connections/>
 </ui>
