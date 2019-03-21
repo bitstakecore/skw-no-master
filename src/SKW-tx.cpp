@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The BS Core developers
+// Copyright (c) 2018 The SKW Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -48,7 +48,7 @@ static bool AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || mapArgs.count("-?") || mapArgs.count("-help")) {
         // First part of help message is specific to this utility
-        std::string strUsage = _("BS Core BS-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("SKW Core BS-tx utility version") + " " + FormatFullVersion() + "\n\n" +
                                _("Usage:") + "\n" +
                                "  BS-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded BS transaction") + "\n" +
                                "  BS-tx [options] -create [commands]   " + _("Create hex-encoded BS transaction") + "\n" +
