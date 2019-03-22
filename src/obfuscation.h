@@ -8,9 +8,6 @@
 #define OBFUSCATION_H
 
 #include "main.h"
-#include "masternode-payments.h"
-#include "masternode-sync.h"
-#include "masternodeman.h"
 #include "obfuscation-relay.h"
 #include "sync.h"
 

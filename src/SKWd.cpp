@@ -9,7 +9,6 @@
 #include "clientversion.h"
 #include "init.h"
 #include "main.h"
-#include "masternodeconfig.h"
 #include "noui.h"
 #include "scheduler.h"
 #include "rpcserver.h"

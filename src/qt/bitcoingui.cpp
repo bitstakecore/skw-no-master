@@ -31,7 +31,6 @@
 #endif
 
 #include "init.h"
-#include "masternodelist.h"
 #include "ui_interface.h"
 #include "util.h"
 

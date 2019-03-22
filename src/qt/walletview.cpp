@@ -10,7 +10,6 @@
 #include "blockexplorer.h"
 #include "clientmodel.h"
 #include "guiutil.h"
-#include "masternodeconfig.h"
 #include "multisenddialog.h"
 #include "multisigdialog.h"
 #include "optionsmodel.h"

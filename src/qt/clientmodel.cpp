@@ -16,8 +16,6 @@
 #include "checkpoints.h"
 #include "clientversion.h"
 #include "main.h"
-#include "masternode-sync.h"
-#include "masternodeman.h"
 #include "net.h"
 #include "ui_interface.h"
 #include "util.h"

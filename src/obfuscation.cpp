@@ -8,7 +8,6 @@
 #include "coincontrol.h"
 #include "init.h"
 #include "main.h"
-#include "masternodeman.h"
 #include "script/sign.h"
 #include "swifttx.h"
 #include "ui_interface.h"
