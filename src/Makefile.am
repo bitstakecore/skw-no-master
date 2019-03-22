@@ -90,7 +90,6 @@ endif
 .PHONY: FORCE
 # SKW Core #
 BITCOIN_CORE_H = \
-  activemasternode.h \
   addrman.h \
   alert.h \
   allocators.h \
@@ -131,12 +130,6 @@ BITCOIN_CORE_H = \
   leveldbwrapper.h \
   limitedmap.h \
   main.h \
-  masternode.h \
-  masternode-payments.h \
-  masternode-budget.h \
-  masternode-sync.h \
-  masternodeman.h \
-  masternodeconfig.h \
   merkleblock.h \
   miner.h \
   mruset.h \
@@ -214,8 +207,6 @@ libbitcoin_server_a_SOURCES = \
   pow.cpp \
   rest.cpp \
   rpcblockchain.cpp \
-  rpcmasternode.cpp \
-  rpcmasternode-budget.cpp \
   rpcmining.cpp \
   rpcmisc.cpp \
   rpcnet.cpp \
@@ -244,19 +235,12 @@ endif
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_wallet_a_SOURCES = \
-  activemasternode.cpp \
   bip38.cpp \
   obfuscation.cpp \
   obfuscation-relay.cpp \
   db.cpp \
   crypter.cpp \
   swifttx.cpp \
-  masternode.cpp \
-  masternode-budget.cpp \
-  masternode-payments.cpp \
-  masternode-sync.cpp \
-  masternodeconfig.cpp \
-  masternodeman.cpp \
   rpcdump.cpp \
   rpcwallet.cpp \
   kernel.cpp \
